@@ -60,6 +60,10 @@ alias tf='tail -f'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 alias wl='wc -l'
 
+# mysql alias
+alias mysql='/usr/local/bin/mysql'
+alias mysqladmin='/usr/local/mysql/bin/mysqladmin'
+
 # git shortcuts
 alias ga='git add'
 alias gall='git add -A'
