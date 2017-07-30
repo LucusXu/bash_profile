@@ -11,6 +11,12 @@ PATH=$PATH:$HOME/bin
 # Set default editor
 EDITOR=vim
 
+#enables colorin the terminal bash shell export
+export CLICOLOR=1
+
+#setsup thecolor scheme for list export
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 # Set color variables
 BLACK="\[\e[0;30m\]"
 DARK_GRAY="\[\e[1;30m\]"
@@ -31,8 +37,12 @@ LIGHT_GRAY="\[\e[0;37m\]"
 WHITE="\[\e[1;37m\]"
 # 不影响其他命令的颜色
 LIGHT_WHITE="\[\e[00m\]"
-# 颜色
-export PS1="${YELLOW}\W:${LIGHT_CYAN}\u${LIGHT_PURPLE}@${LIGHT_GREEN}\h${LIGHT_WHITE}: "
+
+#sets up theprompt color (currently a green similar to linux terminal)
+# export PS1="${YELLOW}\W:${LIGHT_CYAN}\u${LIGHT_PURPLE}@${LIGHT_GREEN}\h${LIGHT_WHITE}: "
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
+#enables colorfor iTerm
+export TERM=xterm-256color
 export PATH
 
 # command cli
@@ -41,13 +51,11 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias c='clear'
 alias cd-='cd -'
+alias ll='ls -alF'
 alias cls='tput reset' ### like clear
+alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
-alias l.='ls -d .* --color=auto'
-alias ll='ls -l --color=auto'
-alias ls='ls --color=auto'
 alias tf='tail -f'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 alias wl='wc -l'
@@ -69,3 +77,4 @@ alias gph='git push origin'
 alias gr='git rm'
 alias gs='git status'
 alias gshow='git show'
+alias gv='git version'
