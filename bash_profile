@@ -61,6 +61,7 @@ alias local='cd /usr/local'
 alias tf='tail -f'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 alias wl='wc -l'
+alias run='cd ~/runtime'
 
 # mysql alias
 alias mysql='/usr/local/bin/mysql'
